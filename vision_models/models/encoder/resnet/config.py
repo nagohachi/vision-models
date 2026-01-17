@@ -4,6 +4,7 @@ from typing import Literal
 
 @dataclass
 class ResNetBlockConfig:
+    in_channels: int
     out_channels: int
     kernel_sizes: list[tuple[int, int]]
     stride: int
