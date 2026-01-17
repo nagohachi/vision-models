@@ -1,3 +1,4 @@
+type: resnet
 version: v2
 in_channels: 3
 stages:
