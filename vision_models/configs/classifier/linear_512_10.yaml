@@ -1,0 +1,3 @@
+type: linear_classifier
+in_features: 512
+num_classes: 10
