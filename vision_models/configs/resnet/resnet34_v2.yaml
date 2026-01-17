@@ -1,0 +1,75 @@
+version: v2
+in_channels: 3
+stages:
+  # Stage 1 (conv2_x): 64ch, 3 blocks
+  - block_configs:
+      - in_channels: 64
+        out_channels: 64
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+      - in_channels: 64
+        out_channels: 64
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+      - in_channels: 64
+        out_channels: 64
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+  # Stage 2 (conv3_x): 128ch, 4 blocks
+  - block_configs:
+      - in_channels: 64
+        out_channels: 128
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 2
+      - in_channels: 128
+        out_channels: 128
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+      - in_channels: 128
+        out_channels: 128
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+      - in_channels: 128
+        out_channels: 128
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+  # Stage 3 (conv4_x): 256ch, 6 blocks
+  - block_configs:
+      - in_channels: 128
+        out_channels: 256
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 2
+      - in_channels: 256
+        out_channels: 256
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+      - in_channels: 256
+        out_channels: 256
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+      - in_channels: 256
+        out_channels: 256
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+      - in_channels: 256
+        out_channels: 256
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+      - in_channels: 256
+        out_channels: 256
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+  # Stage 4 (conv5_x): 512ch, 3 blocks
+  - block_configs:
+      - in_channels: 256
+        out_channels: 512
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 2
+      - in_channels: 512
+        out_channels: 512
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1
+      - in_channels: 512
+        out_channels: 512
+        kernel_sizes: [[3, 3], [3, 3]]
+        stride: 1

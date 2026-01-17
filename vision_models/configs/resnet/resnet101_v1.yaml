@@ -1,0 +1,143 @@
+version: v1
+in_channels: 3
+stages:
+  # Stage 1 (conv2_x): 256ch, 3 blocks
+  - block_configs:
+      - in_channels: 64
+        out_channels: 256
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 256
+        out_channels: 256
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 256
+        out_channels: 256
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+  # Stage 2 (conv3_x): 512ch, 4 blocks
+  - block_configs:
+      - in_channels: 256
+        out_channels: 512
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 2
+      - in_channels: 512
+        out_channels: 512
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 512
+        out_channels: 512
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 512
+        out_channels: 512
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+  # Stage 3 (conv4_x): 1024ch, 23 blocks
+  - block_configs:
+      - in_channels: 512
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 2
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 1024
+        out_channels: 1024
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+  # Stage 4 (conv5_x): 2048ch, 3 blocks
+  - block_configs:
+      - in_channels: 1024
+        out_channels: 2048
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 2
+      - in_channels: 2048
+        out_channels: 2048
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
+      - in_channels: 2048
+        out_channels: 2048
+        kernel_sizes: [[1, 1], [3, 3], [1, 1]]
+        stride: 1
