@@ -18,4 +18,5 @@ class ResNetStageConfig:
 @dataclass
 class ResNetConfig:
     version: Literal["v1", "v2"]
+    in_channels: int
     stages: list[ResNetStageConfig]
