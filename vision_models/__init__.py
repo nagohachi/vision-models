@@ -1,0 +1,1 @@
+import vision_models.registry
